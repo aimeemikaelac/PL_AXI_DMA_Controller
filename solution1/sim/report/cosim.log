@@ -1,0 +1,3 @@
+@I [SIM-47] Using XSIM for RTL simulation.
+@I [SIM-14] Instrumenting C test bench ...
+@W [SIM-369] AXI_master port 'AXI_DMA_SLAVE' has a depth of '14'. Insufficient depth may result in simulation mismatch or freeze.

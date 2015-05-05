@@ -1,0 +1,5 @@
+   Build using "/Xilinx/Vivado_HLS/2014.1/lnx64/tools/gcc/bin/g++"
+   Compiling apatb_pl_axi_dma_controller.cpp
+   Compiling PL_AXI_DMA_Controller.cpp_pre.cpp.tb.cpp
+   Compiling PL_AXI_DMA_Controller_Testbench.cpp_pre.cpp.tb.cpp
+   Generating cosim.tv.exe

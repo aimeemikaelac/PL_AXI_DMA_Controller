@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<vivadoHLSLog:LogRoot xmlns:vivadoHLSLog="www.xilinx.com/vivadoHLSLog">
+  <errorLogs>
+    <logs>
+      <synLog/>
+      <simLog/>
+      <mgLog/>
+      <packageLog/>
+      <csimLog/>
+    </logs>
+  </errorLogs>
+  <warningLogs>
+    <logs>
+      <synLog>
+        <logs message="@W [RTGEN-101] Port 'controller_finished_V' with mode 'ap_none' may require an associated data valid signal to correctly communicate with other blocks or a test bench; automatic C/RTL co-simulation may not be able to verify such a port." projectName="PL_AXI_DMA_Controller" solutionName="solution1" date="2015-03-24T02:02:45.041-0600" type="Warning"/>
+        <logs message="@W [RTGEN-101] Port 'dma_address' with mode 'ap_none' may require an associated data valid signal to correctly communicate with other blocks or a test bench; automatic C/RTL co-simulation may not be able to verify such a port." projectName="PL_AXI_DMA_Controller" solutionName="solution1" date="2015-03-24T02:02:45.032-0600" type="Warning"/>
+        <logs message="@W [RTGEN-101] Port 'dma_status' with mode 'ap_none' may require an associated data valid signal to correctly communicate with other blocks or a test bench; automatic C/RTL co-simulation may not be able to verify such a port." projectName="PL_AXI_DMA_Controller" solutionName="solution1" date="2015-03-24T02:02:45.024-0600" type="Warning"/>
+        <logs message="@W [RTGEN-101] Port 'dma_control' with mode 'ap_none' may require an associated data valid signal to correctly communicate with other blocks or a test bench; automatic C/RTL co-simulation may not be able to verify such a port." projectName="PL_AXI_DMA_Controller" solutionName="solution1" date="2015-03-24T02:02:45.015-0600" type="Warning"/>
+        <logs message="@W [RTGEN-101] Port 'reset_scanner' with mode 'ap_none' may require an associated data valid signal to correctly communicate with other blocks or a test bench; automatic C/RTL co-simulation may not be able to verify such a port." projectName="PL_AXI_DMA_Controller" solutionName="solution1" date="2015-03-24T02:02:45.007-0600" type="Warning"/>
+        <logs message="@W [SYN-561] Cannot apply I/O mode 'ap_none' on port 'return'; changing to the default 'ap_ctrl_hs' mode." projectName="PL_AXI_DMA_Controller" solutionName="solution1" date="2015-03-24T02:02:44.922-0600" type="Warning"/>
+        <logs message="@W [RTGEN-101] Legalizing port name 'pl_axi_dma_controller/length' to 'pl_axi_dma_controller/length_r'." projectName="PL_AXI_DMA_Controller" solutionName="solution1" date="2015-03-24T02:02:44.862-0600" type="Warning"/>
+        <logs message="@W [RTGEN-101] Legalizing port name 'pl_axi_dma_controller/write' to 'pl_axi_dma_controller/write_r'." projectName="PL_AXI_DMA_Controller" solutionName="solution1" date="2015-03-24T02:02:44.855-0600" type="Warning"/>
+      </synLog>
+      <simLog/>
+      <mgLog/>
+      <packageLog/>
+      <csimLog/>
+    </logs>
+  </warningLogs>
+</vivadoHLSLog:LogRoot>

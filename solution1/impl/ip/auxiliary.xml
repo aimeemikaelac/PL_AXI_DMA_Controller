@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xd:acceleratorMap xmlns:xd="http://www.xilinx.com/xidane" xd:functionName="pl_axi_dma_controller" xd:componentRef="pl_axi_dma_controller" xd:initiationInterval="x" xd:clockPeriod="10.000000" xd:sequential="true" xd:hostMachine="64">
+  <xd:controlReg xd:name="control" xd:interfaceRef="ap_ctrl" xd:busTypeRef="acc_handshake" xd:type="acc_handshake"/>
+  <xd:arg xd:name="AXI_DMA_SLAVE[]" xd:originalName="AXI_DMA_SLAVE" xd:direction="inout" xd:interfaceRef="m_axi_AXI_DMA_SLAVE" xd:busTypeRef="aximm" xd:arraySize="14" xd:dataWidth="32"/>
+  <xd:arg xd:name="startAddress" xd:originalName="startAddress" xd:direction="in" xd:interfaceRef="startAddress" xd:busTypeRef="register" xd:handshakeRef="ap_none" xd:dataWidth="32"/>
+  <xd:arg xd:name="write" xd:originalName="write" xd:direction="in" xd:interfaceRef="write_r" xd:busTypeRef="register" xd:handshakeRef="ap_none" xd:dataWidth="1"/>
+  <xd:arg xd:name="length" xd:originalName="length" xd:direction="in" xd:interfaceRef="length_r" xd:busTypeRef="register" xd:handshakeRef="ap_none" xd:dataWidth="32"/>
+  <xd:arg xd:name="iterations" xd:originalName="iterations" xd:direction="in" xd:interfaceRef="iterations" xd:busTypeRef="register" xd:handshakeRef="ap_none" xd:dataWidth="32"/>
+  <xd:arg xd:name="enabled" xd:originalName="enabled" xd:direction="in" xd:interfaceRef="enabled" xd:busTypeRef="register" xd:handshakeRef="ap_none" xd:dataWidth="1"/>
+  <xd:arg xd:name="*(reset_scanner)" xd:originalName="reset_scanner" xd:direction="out" xd:interfaceRef="reset_scanner" xd:busTypeRef="register" xd:handshakeRef="ap_none" xd:dataWidth="1"/>
+  <xd:arg xd:name="*(dma_control)" xd:originalName="dma_control" xd:direction="out" xd:interfaceRef="dma_control" xd:busTypeRef="register" xd:handshakeRef="ap_none" xd:dataWidth="32"/>
+  <xd:arg xd:name="*(dma_status)" xd:originalName="dma_status" xd:direction="out" xd:interfaceRef="dma_status" xd:busTypeRef="register" xd:handshakeRef="ap_none" xd:dataWidth="32"/>
+  <xd:arg xd:name="*(dma_address)" xd:originalName="dma_address" xd:direction="out" xd:interfaceRef="dma_address" xd:busTypeRef="register" xd:handshakeRef="ap_none" xd:dataWidth="32"/>
+  <xd:arg xd:name="*(fabric_interrupt_write_finished)" xd:originalName="fabric_interrupt_write_finished" xd:direction="in" xd:interfaceRef="fabric_interrupt_write_finished_V" xd:busTypeRef="register" xd:handshakeRef="ap_none" xd:dataWidth="1"/>
+  <xd:arg xd:name="*(fabric_interrupt_read_finished)" xd:originalName="fabric_interrupt_read_finished" xd:direction="in" xd:interfaceRef="fabric_interrupt_read_finished_V" xd:busTypeRef="register" xd:handshakeRef="ap_none" xd:dataWidth="1"/>
+  <xd:arg xd:name="*(controller_finished)" xd:originalName="controller_finished" xd:direction="out" xd:interfaceRef="controller_finished_V" xd:busTypeRef="register" xd:handshakeRef="ap_none" xd:dataWidth="1"/>
+  <xd:latencyEstimates xd:best-case="undef" xd:worst-case="undef" xd:average-case="undef"/>
+  <xd:resourceEstimates xd:LUT="393" xd:FF="411" xd:BRAM="0" xd:DSP="0"/>
+</xd:acceleratorMap>

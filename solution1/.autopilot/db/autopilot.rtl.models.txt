@@ -1,0 +1,2 @@
+pl_axi_dma_controller_AXI_DMA_SLAVE_m_axi
+pl_axi_dma_controller

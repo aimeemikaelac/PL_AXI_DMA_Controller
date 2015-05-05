@@ -1,0 +1,223 @@
+
+
+================================================================
+== Vivado HLS Report for 'pl_axi_dma_controller'
+================================================================
+* Date:           Tue Mar 24 02:02:45 2015
+
+* Version:        2014.1 (build date: Fri Apr 04 13:20:25 PM 2014)
+* Project:        PL_AXI_DMA_Controller
+* Solution:       solution1
+* Product family: zynq zynq_fpv6 
+* Target device:  xc7z020clg484-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing (ns): 
+    * Summary: 
+    +---------+-------+----------+------------+
+    |  Clock  | Target| Estimated| Uncertainty|
+    +---------+-------+----------+------------+
+    |default  |  10.00|      8.75|        1.25|
+    +---------+-------+----------+------------+
+
++ Latency (clock cycles): 
+    * Summary: 
+    +-----+-----+-----+-----+---------+
+    |  Latency  |  Interval | Pipeline|
+    | min | max | min | max |   Type  |
+    +-----+-----+-----+-----+---------+
+    |    ?|    ?|    ?|    ?|   none  |
+    +-----+-----+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +-------------+-----+-----+----------+-----------+-----------+------+----------+
+        |             |  Latency  | Iteration|  Initiation Interval  | Trip |          |
+        |  Loop Name  | min | max |  Latency |  achieved |   target  | Count| Pipelined|
+        +-------------+-----+-----+----------+-----------+-----------+------+----------+
+        |- Loop 1     |    ?|    ?|         ?|          -|          -|     ?|    no    |
+        | + Loop 1.1  |    ?|    ?|         4|          -|          -|     ?|    no    |
+        | + Loop 1.2  |    ?|    ?|         1|          -|          -|     ?|    no    |
+        |- Loop 2     |    ?|    ?|         1|          -|          -|     ?|    no    |
+        +-------------+-----+-----+----------+-----------+-----------+------+----------+
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+-------+--------+-------+
+|       Name      | BRAM_18K| DSP48E|   FF   |  LUT  |
++-----------------+---------+-------+--------+-------+
+|Expression       |        -|      -|       0|    105|
+|FIFO             |        -|      -|       -|      -|
+|Instance         |        -|      -|       -|      -|
+|Memory           |        -|      -|       -|      -|
+|Multiplexer      |        -|      -|       -|    288|
+|Register         |        -|      -|     411|      -|
++-----------------+---------+-------+--------+-------+
+|Total            |        0|      0|     411|    393|
++-----------------+---------+-------+--------+-------+
+|Available        |      280|    220|  106400|  53200|
++-----------------+---------+-------+--------+-------+
+|Utilization (%)  |        0|      0|   ~0   |   ~0  |
++-----------------+---------+-------+--------+-------+
+
++ Detail: 
+    * Instance: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +--------------------------+----------+-------+---+----+------------+------------+
+    |       Variable Name      | Operation| DSP48E| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +--------------------------+----------+-------+---+----+------------+------------+
+    |i_1_fu_408_p2             |     +    |      0|  0|  32|          32|           1|
+    |localAddress_1_fu_445_p2  |     +    |      0|  0|  32|          32|           3|
+    |tmp_2_fu_402_p2           |   icmp   |      0|  0|  40|          32|          32|
+    |ap_sig_bdd_504            |    or    |      0|  0|   1|           1|           1|
+    +--------------------------+----------+-------+---+----+------------+------------+
+    |Total                     |          |      0|  0| 105|          97|          37|
+    +--------------------------+----------+-------+---+----+------------+------------+
+
+    * Multiplexer: 
+    +-----------------------+----+-----------+-----+-----------+
+    |          Name         | LUT| Input Size| Bits| Total Bits|
+    +-----------------------+----+-----------+-----+-----------+
+    |AXI_DMA_SLAVE_ARADDR   |  32|          5|   32|        160|
+    |AXI_DMA_SLAVE_AWADDR   |  32|          7|   32|        224|
+    |AXI_DMA_SLAVE_WDATA    |  64|         10|   32|        320|
+    |dma_address            |  32|          2|   32|         64|
+    |dma_control            |  32|          2|   32|         64|
+    |dma_status             |  32|          2|   32|         64|
+    |i_reg_237              |  32|          2|   32|         64|
+    |localAddress1_reg_248  |  32|          2|   32|         64|
+    +-----------------------+----+-----------+-----+-----------+
+    |Total                  | 288|         32|  256|       1024|
+    +-----------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +--------------------------------------+----+----+-----+-----------+
+    |                 Name                 | FF | LUT| Bits| Const Bits|
+    +--------------------------------------+----+----+-----+-----------+
+    |AXI_DMA_SLAVE_addr_1_reg_531          |   0|   0|   32|         32|
+    |AXI_DMA_SLAVE_addr_2_reg_536          |   0|   0|   32|         32|
+    |AXI_DMA_SLAVE_addr_3_reg_489          |   0|   0|   32|         32|
+    |AXI_DMA_SLAVE_addr_reg_525            |   0|   0|   32|         32|
+    |ap_CS_fsm                             |   5|   0|    5|          0|
+    |ap_reg_ioackin_AXI_DMA_SLAVE_ARREADY  |   1|   0|    1|          0|
+    |ap_reg_ioackin_AXI_DMA_SLAVE_AWREADY  |   1|   0|    1|          0|
+    |ap_reg_ioackin_AXI_DMA_SLAVE_WREADY   |   1|   0|    1|          0|
+    |controller_finished_V_preg            |   1|   0|    1|          0|
+    |dma_address_preg                      |  32|   0|   32|          0|
+    |dma_control_preg                      |  32|   0|   32|          0|
+    |dma_status_preg                       |  32|   0|   32|          0|
+    |enabled_assign_fu_122                 |   1|   0|    1|          0|
+    |i_1_reg_545                           |  32|   0|   32|          0|
+    |i_reg_237                             |  32|   0|   32|          0|
+    |iterations_assign_fu_118              |  32|   0|   32|          0|
+    |length_assign_fu_114                  |  32|   0|   32|          0|
+    |localAddress1_reg_248                 |  32|   0|   32|          0|
+    |localAddress_1_reg_558                |  32|   0|   32|          0|
+    |localEnabled_reg_481                  |   1|   0|    1|          0|
+    |p_Val2_2_reg_228                      |   1|   0|    1|          0|
+    |p_Val2_s_reg_260                      |   1|   0|    1|          0|
+    |reg_298                               |  31|   0|   31|          0|
+    |reg_302                               |  19|   0|   19|          0|
+    |reset_scanner_preg                    |   1|   0|    1|          0|
+    |startAddress_assign_fu_106            |  32|   0|   32|          0|
+    |tmp_10_reg_553                        |  12|   0|   12|          0|
+    |tmp_2_reg_541                         |   1|   0|    1|          0|
+    |tmp_4_reg_495                         |  12|   0|   12|          0|
+    |write_assign_fu_110                   |   1|   0|    1|          0|
+    |write_assign_load_reg_485             |   1|   0|    1|          0|
+    +--------------------------------------+----+----+-----+-----------+
+    |Total                                 | 411|   0|  539|        128|
+    +--------------------------------------+----+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++-----------------------------------+-----+-----+------------+-----------------------------------+--------------+
+|             RTL Ports             | Dir | Bits|  Protocol  |           Source Object           |    C Type    |
++-----------------------------------+-----+-----+------------+-----------------------------------+--------------+
+|ap_clk                             |  in |    1| ap_ctrl_hs |       pl_axi_dma_controller       | return value |
+|ap_rst_n                           |  in |    1| ap_ctrl_hs |       pl_axi_dma_controller       | return value |
+|ap_start                           |  in |    1| ap_ctrl_hs |       pl_axi_dma_controller       | return value |
+|ap_done                            | out |    1| ap_ctrl_hs |       pl_axi_dma_controller       | return value |
+|ap_idle                            | out |    1| ap_ctrl_hs |       pl_axi_dma_controller       | return value |
+|ap_ready                           | out |    1| ap_ctrl_hs |       pl_axi_dma_controller       | return value |
+|m_axi_AXI_DMA_SLAVE_AWVALID        | out |    1|    m_axi   |           AXI_DMA_SLAVE           |    pointer   |
+|m_axi_AXI_DMA_SLAVE_AWREADY        |  in |    1|    m_axi   |           AXI_DMA_SLAVE           |    pointer   |
+|m_axi_AXI_DMA_SLAVE_AWADDR         | out |   32|    m_axi   |           AXI_DMA_SLAVE           |    pointer   |
+|m_axi_AXI_DMA_SLAVE_AWID           | out |    1|    m_axi   |           AXI_DMA_SLAVE           |    pointer   |
+|m_axi_AXI_DMA_SLAVE_AWLEN          | out |    8|    m_axi   |           AXI_DMA_SLAVE           |    pointer   |
+|m_axi_AXI_DMA_SLAVE_AWSIZE         | out |    3|    m_axi   |           AXI_DMA_SLAVE           |    pointer   |
+|m_axi_AXI_DMA_SLAVE_AWBURST        | out |    2|    m_axi   |           AXI_DMA_SLAVE           |    pointer   |
+|m_axi_AXI_DMA_SLAVE_AWLOCK         | out |    2|    m_axi   |           AXI_DMA_SLAVE           |    pointer   |
+|m_axi_AXI_DMA_SLAVE_AWCACHE        | out |    4|    m_axi   |           AXI_DMA_SLAVE           |    pointer   |
+|m_axi_AXI_DMA_SLAVE_AWPROT         | out |    3|    m_axi   |           AXI_DMA_SLAVE           |    pointer   |
+|m_axi_AXI_DMA_SLAVE_AWQOS          | out |    4|    m_axi   |           AXI_DMA_SLAVE           |    pointer   |
+|m_axi_AXI_DMA_SLAVE_AWREGION       | out |    4|    m_axi   |           AXI_DMA_SLAVE           |    pointer   |
+|m_axi_AXI_DMA_SLAVE_AWUSER         | out |    1|    m_axi   |           AXI_DMA_SLAVE           |    pointer   |
+|m_axi_AXI_DMA_SLAVE_WVALID         | out |    1|    m_axi   |           AXI_DMA_SLAVE           |    pointer   |
+|m_axi_AXI_DMA_SLAVE_WREADY         |  in |    1|    m_axi   |           AXI_DMA_SLAVE           |    pointer   |
+|m_axi_AXI_DMA_SLAVE_WDATA          | out |   32|    m_axi   |           AXI_DMA_SLAVE           |    pointer   |
+|m_axi_AXI_DMA_SLAVE_WSTRB          | out |    4|    m_axi   |           AXI_DMA_SLAVE           |    pointer   |
+|m_axi_AXI_DMA_SLAVE_WLAST          | out |    1|    m_axi   |           AXI_DMA_SLAVE           |    pointer   |
+|m_axi_AXI_DMA_SLAVE_WID            | out |    1|    m_axi   |           AXI_DMA_SLAVE           |    pointer   |
+|m_axi_AXI_DMA_SLAVE_WUSER          | out |    1|    m_axi   |           AXI_DMA_SLAVE           |    pointer   |
+|m_axi_AXI_DMA_SLAVE_ARVALID        | out |    1|    m_axi   |           AXI_DMA_SLAVE           |    pointer   |
+|m_axi_AXI_DMA_SLAVE_ARREADY        |  in |    1|    m_axi   |           AXI_DMA_SLAVE           |    pointer   |
+|m_axi_AXI_DMA_SLAVE_ARADDR         | out |   32|    m_axi   |           AXI_DMA_SLAVE           |    pointer   |
+|m_axi_AXI_DMA_SLAVE_ARID           | out |    1|    m_axi   |           AXI_DMA_SLAVE           |    pointer   |
+|m_axi_AXI_DMA_SLAVE_ARLEN          | out |    8|    m_axi   |           AXI_DMA_SLAVE           |    pointer   |
+|m_axi_AXI_DMA_SLAVE_ARSIZE         | out |    3|    m_axi   |           AXI_DMA_SLAVE           |    pointer   |
+|m_axi_AXI_DMA_SLAVE_ARBURST        | out |    2|    m_axi   |           AXI_DMA_SLAVE           |    pointer   |
+|m_axi_AXI_DMA_SLAVE_ARLOCK         | out |    2|    m_axi   |           AXI_DMA_SLAVE           |    pointer   |
+|m_axi_AXI_DMA_SLAVE_ARCACHE        | out |    4|    m_axi   |           AXI_DMA_SLAVE           |    pointer   |
+|m_axi_AXI_DMA_SLAVE_ARPROT         | out |    3|    m_axi   |           AXI_DMA_SLAVE           |    pointer   |
+|m_axi_AXI_DMA_SLAVE_ARQOS          | out |    4|    m_axi   |           AXI_DMA_SLAVE           |    pointer   |
+|m_axi_AXI_DMA_SLAVE_ARREGION       | out |    4|    m_axi   |           AXI_DMA_SLAVE           |    pointer   |
+|m_axi_AXI_DMA_SLAVE_ARUSER         | out |    1|    m_axi   |           AXI_DMA_SLAVE           |    pointer   |
+|m_axi_AXI_DMA_SLAVE_RVALID         |  in |    1|    m_axi   |           AXI_DMA_SLAVE           |    pointer   |
+|m_axi_AXI_DMA_SLAVE_RREADY         | out |    1|    m_axi   |           AXI_DMA_SLAVE           |    pointer   |
+|m_axi_AXI_DMA_SLAVE_RDATA          |  in |   32|    m_axi   |           AXI_DMA_SLAVE           |    pointer   |
+|m_axi_AXI_DMA_SLAVE_RLAST          |  in |    1|    m_axi   |           AXI_DMA_SLAVE           |    pointer   |
+|m_axi_AXI_DMA_SLAVE_RID            |  in |    1|    m_axi   |           AXI_DMA_SLAVE           |    pointer   |
+|m_axi_AXI_DMA_SLAVE_RUSER          |  in |    1|    m_axi   |           AXI_DMA_SLAVE           |    pointer   |
+|m_axi_AXI_DMA_SLAVE_RRESP          |  in |    2|    m_axi   |           AXI_DMA_SLAVE           |    pointer   |
+|m_axi_AXI_DMA_SLAVE_BVALID         |  in |    1|    m_axi   |           AXI_DMA_SLAVE           |    pointer   |
+|m_axi_AXI_DMA_SLAVE_BREADY         | out |    1|    m_axi   |           AXI_DMA_SLAVE           |    pointer   |
+|m_axi_AXI_DMA_SLAVE_BRESP          |  in |    2|    m_axi   |           AXI_DMA_SLAVE           |    pointer   |
+|m_axi_AXI_DMA_SLAVE_BID            |  in |    1|    m_axi   |           AXI_DMA_SLAVE           |    pointer   |
+|m_axi_AXI_DMA_SLAVE_BUSER          |  in |    1|    m_axi   |           AXI_DMA_SLAVE           |    pointer   |
+|startAddress                       |  in |   32|   ap_none  |            startAddress           |    scalar    |
+|write_r                            |  in |    1|   ap_none  |              write_r              |    scalar    |
+|length_r                           |  in |   32|   ap_none  |              length_r             |    scalar    |
+|iterations                         |  in |   32|   ap_none  |             iterations            |    scalar    |
+|enabled                            |  in |    1|   ap_none  |              enabled              |    scalar    |
+|reset_scanner                      | out |    1|   ap_none  |           reset_scanner           |    pointer   |
+|dma_control                        | out |   32|   ap_none  |            dma_control            |    pointer   |
+|dma_status                         | out |   32|   ap_none  |             dma_status            |    pointer   |
+|dma_address                        | out |   32|   ap_none  |            dma_address            |    pointer   |
+|fabric_interrupt_write_finished_V  |  in |    1|   ap_none  | fabric_interrupt_write_finished_V |    pointer   |
+|fabric_interrupt_read_finished_V   |  in |    1|   ap_none  |  fabric_interrupt_read_finished_V |    pointer   |
+|controller_finished_V              | out |    1|   ap_none  |       controller_finished_V       |    pointer   |
++-----------------------------------+-----+-----+------------+-----------------------------------+--------------+
+
